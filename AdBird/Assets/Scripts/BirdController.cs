@@ -7,7 +7,7 @@ public class BirdController : MonoBehaviour
     [SerializeField] private float _rotationSpeed = 10f;
     [SerializeField] private float _heightRange;
     [SerializeField] private GameObject _floatingAd;
-    public Camera _camera;
+    [SerializeField] private Camera _camera;
     private int _jumpCount = 0;
 
     private Rigidbody2D _rigidbody;
