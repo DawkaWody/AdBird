@@ -18,7 +18,7 @@ public class BirdController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Touchscreen.current.primaryTouch.press.wasPressedThisFrame) return;
+        if (!Touchscreen.current.primaryTouch.press.wasPressedThisFrame || GameManager.instance.checkForGameOver()) return;
         if (UiManager.Instance.isPaused) return;
 
         _rigidbody.linearVelocity = Vector2.up * _speed;

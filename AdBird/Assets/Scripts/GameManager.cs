@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject _gameOverCanvas;
 
+    private bool isGameOver;
+
     private void Awake()
     {
         if (instance == null)
@@ -15,17 +17,23 @@ public class GameManager : MonoBehaviour
         }
 
         Time.timeScale = 1f;
+        isGameOver = false;
     }
 
     public void GameOver()
     {
         _gameOverCanvas.SetActive(true);
+        isGameOver = true;
 
         Time.timeScale = 0f;
     }
-
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        isGameOver = false;
+    }
+    public bool checkForGameOver()
+    {
+        return isGameOver;
     }
 }
