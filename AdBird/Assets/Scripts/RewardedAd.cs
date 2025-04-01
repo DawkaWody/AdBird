@@ -23,7 +23,7 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
 #if UNITY_IOS
         _adUnitId = _iOSAdUnitId;
 #elif UNITY_ANDROID
-        _adUnitId = _androidAdUnitId
+        _adUnitId = _androidAdUnitId;
 #elif UNITY_EDITOR
         _adUnitId = _androidAdUnitId; //Only for testing the functionality in the Editor
 #endif
