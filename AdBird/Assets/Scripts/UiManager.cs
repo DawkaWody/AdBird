@@ -6,6 +6,8 @@ public class UiManager : MonoBehaviour
     public bool isPaused;
 
     [SerializeField] private GameObject _buyClicksPanel;
+    [SerializeField] private GameObject _gameOverCanvas;
+    [SerializeField] private GameObject _gameOverText;
 
     private void Awake()
     {
@@ -20,6 +22,12 @@ public class UiManager : MonoBehaviour
         Time.timeScale = 0;
         isPaused = true;
         _buyClicksPanel.SetActive(true);
+    }
+
+    public void EnableGameStart()
+    {
+        _gameOverCanvas.SetActive(true);
+        _gameOverText.SetActive(false);
     }
 
     public void UnfreezeTime()
