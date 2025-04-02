@@ -356,7 +356,7 @@ MonoBehaviour:
   _speed: 1.5
   _rotationSpeed: 10
   _heightRange: 0
-  _floatingAd: {fileID: 0}
+  _floatingAd: {fileID: 653370261863286087, guid: 3bb296e3e063b36488504f81da133fd9, type: 3}
   _camera: {fileID: 519420031}
 --- !u!1 &172468671
 GameObject:
